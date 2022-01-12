@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Search from './Search';
+import axios from 'axios';
 
-const App = () => {
-    return (<div>Bother fe lo scope</div>);
+function  App(){
+    return (
+        <Search />
+    );
 }
 
 export default App;
