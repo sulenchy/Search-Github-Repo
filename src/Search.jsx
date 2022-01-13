@@ -20,6 +20,8 @@ const  Search = () => {
             setUser(value);
             const repos = await getRepos(value);
             setRepos(repos);
+        } else {
+            setRepos([]);
         }
     }
 
@@ -30,7 +32,7 @@ const  Search = () => {
 
     return (
         <MainContainer>
-            <input ref={ inputRef } type="search" id="github-users" placeholder="Enter gihtub username" onChange={ (event) => handleChange(event) } />
+            <input ref={ inputRef } type="search" id="github-users" placeholder="Enter gihtub username" onChange={ debounce((event) => handleChange(event), 1000) } />
             {
                 user ?
                 <div>
