@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import Search from './Search';
-import axios from 'axios';
+import ErrorBoundary from './ErrorBoundary';
 
 function  App(){
     return (
-        <Search />
+        // <ErrorBoundary>
+            <Search />
+        // </ErrorBoundary>
     );
 }
 
