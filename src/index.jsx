@@ -11,8 +11,8 @@ ReactDOM.render(
        <ErrorBoundary>
             <Routes>
                 <Route path="/" element={<App />} />
-                <Route path="readme" element={<ReadMe />} />
                 <Route path="search" element={<Search />} />
+                <Route path="readme/:user/:repo" element={<ReadMe />} />
                 <Route
                     path="*"
                     element={
@@ -22,6 +22,7 @@ ReactDOM.render(
                     }
                 />
             </Routes>
+            <div>Loading</div>
         </ErrorBoundary>
     </BrowserRouter>,
     document.getElementById('root'));

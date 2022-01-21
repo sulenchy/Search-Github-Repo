@@ -24,9 +24,14 @@ async function getRepos(user) {
     }
 }
 
+async function getRepoReadme({user, repo}) {
+    return await axios.get(`https://raw.githubusercontent.com/${user}/${repo}/master/README.md`);
+}
+
 
 
 export {
     getRepos,
-    debounce
+    debounce,
+    getRepoReadme
 }

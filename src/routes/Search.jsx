@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import {  Link } from "react-router-dom";
-import { getRepos, debounce } from '../helper';
+import { getRepos, debounce } from '../helpers';
 
 const MainContainer = styled.div`
 `;
@@ -34,14 +34,13 @@ const  Search = () => {
     return (
         <MainContainer>
             <input ref={ inputRef } type="search" id="github-users" placeholder="Enter gihtub username" onChange={ debounce((event) => handleChange(event), 1000) } />
-            <Link to="/readme">readme</Link>
             <hr />
             {
                 user ?
                 <div>
                     {
                         repos.map((repo, index) => {
-                            return <div><Link to="/" key={index}>{repo.full_name || repo}</Link></div>
+                            return <div key={`wrapper-${index}`}><Link to={`/readme/${repo.full_name}`} key={index}>{repo.full_name || repo}</Link></div>
                         })
                     }
                 </div>
