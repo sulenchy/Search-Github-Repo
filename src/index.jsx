@@ -22,7 +22,6 @@ ReactDOM.render(
                     }
                 />
             </Routes>
-            <div>Loading</div>
         </ErrorBoundary>
     </BrowserRouter>,
     document.getElementById('root'));
