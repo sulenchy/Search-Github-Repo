@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ReadMe from './routes/ReadMe';
 import Search from './routes/Search';
 import ErrorBoundary from './ErrorBoundary';
+import "./styles.scss"
 
 ReactDOM.render(
     <BrowserRouter>
