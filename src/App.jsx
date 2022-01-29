@@ -4,8 +4,7 @@ import Search from './routes/Search';
 
 function  App(){
     return (
-        <div>
-            <h2>Github Users</h2>
+        <div className="app-wrapper">
             <Search />
         </div>
     );

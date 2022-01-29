@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development --hot --port 4002",
+    "dev": "webpack-dev-server --open --mode development --hot --port 4002",
     "build": "webpack --mode production"
   },
   "author": "",
@@ -16,7 +16,6 @@
     "react-dom": "^17.0.2",
     "react-markdown": "^8.0.0",
     "react-router-dom": "^6.2.1",
-    "styled-components": "^5.3.3",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.2"
   },

@@ -8,7 +8,14 @@ const debounce = (func, delay) => {
         timerId = setTimeout(() => func.apply(this,arguments), delay)
     }; 
 };
+// this accept object with at least a full_name key
+const sortByFullName = (obj) => {
+    return obj.sort(function (a, b) {
+        return a.full_name - b.full_name;
+    });
+}
 
+// retrieve repositories by user
 async function getRepos(user) {
     try {
         if (user) {
@@ -24,14 +31,15 @@ async function getRepos(user) {
     }
 }
 
+// retrieve the read me for a repo
 async function getRepoReadme({user, repo}) {
     return await axios.get(`https://raw.githubusercontent.com/${user}/${repo}/master/README.md`);
 }
 
 
-
 export {
     getRepos,
     debounce,
-    getRepoReadme
+    getRepoReadme,
+    sortByName
 }
