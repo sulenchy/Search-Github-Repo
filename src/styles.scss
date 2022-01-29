@@ -45,7 +45,7 @@ body {
   outline: none;
   padding-left: 10px;
   padding-right: 10px;
-  width: 60%;
+  width: 80%;
 }
 
 .flex-start {
@@ -80,4 +80,11 @@ body {
 .header-wrapper {
   @include flex-fixed;
   transition: transform 2s;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .input {
+    width: 60%;
+  }
 }

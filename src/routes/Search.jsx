@@ -39,7 +39,7 @@ const  Search = () => {
                 <h2>Github Repositories</h2>
                 <input className="input" ref={ inputRef } type="search" id="github-users" placeholder="Search github repo by username" onChange={ debounce((event) => handleChange(event), 1000) } />
             </div>
-            <div  style={{ height: '80%', overflow: 'scroll' }}>
+            <div  style={{ height: '80%', overflowY: 'scroll', overflowX: 'hidden' }}>
             {
                 user ?
                 <div className='result-container flex-start'>
