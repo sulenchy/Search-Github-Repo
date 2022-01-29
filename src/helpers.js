@@ -41,5 +41,5 @@ export {
     getRepos,
     debounce,
     getRepoReadme,
-    sortByName
+    sortByFullName
 }

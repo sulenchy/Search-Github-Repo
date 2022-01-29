@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import {  Link } from "react-router-dom";
-import { getRepos, debounce, sortByName } from '../helpers';
+import { getRepos, debounce, sortByFullName } from '../helpers';
 
 const  Search = () => {
     const [repos, setRepos] = useState([]);
@@ -32,7 +32,7 @@ const  Search = () => {
     [repos]);
 
     const computeName = (repo) => repo.full_name && repo.full_name.split('/')[1] || repo
-    const sortedRepos = sortByName(repos);
+    const sortedRepos = sortByFullName(repos);
     return (
         <div className="flex-container">
             <div style={{ height: '15%'}} id="headerWrapper" className='header-wrapper'>

@@ -15,11 +15,11 @@ const ReadMe = () => {
     }, []);
 
     return(
-        <div>
+        <div style={{ padding: '10px' }}>
             <ReactMarkdown>
                 { repoReadmeMd }
             </ReactMarkdown>
-            <Link to="/">back</Link>
+            <Link style={{ background: '#fff', position: 'fixed', top: '0', textDecoration: 'none' }} to="/">Back</Link>
         </div>
     )
 }
