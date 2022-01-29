@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { BASE_URL } from './constants';
 
+// delay a func for a given delay before it get executed
 const debounce = (func, delay) => { 
     let timerId; 
     return function() { 
