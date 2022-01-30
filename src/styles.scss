@@ -29,9 +29,8 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
-  padding: 100px 20px 0
+  padding: 90px 20px 0
 }
 
 .input {
@@ -86,5 +85,9 @@ body {
 @media only screen and (min-width: 768px) {
   .input {
     width: 60%;
+  }
+
+  .result-container {
+    padding: 125px 20px 0
   }
 }

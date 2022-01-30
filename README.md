@@ -7,6 +7,10 @@ This app consumes some of Github API. One for getting the repositories of a give
 - Install the dependencies `cd SearchGithubrepo & npm install`
 - Start the app `npm run dev`
 
+or 
+
+You can access hosted version at https://githubreposearch-a6d6f.web.app/
+
 # Available Scripts
 In the project directory, you can run:
 
