@@ -23,9 +23,8 @@ async function getRepos(user) {
             const response = await axios.get(`${BASE_URL}/users/${user}/repos`);
             if(response.status === 200 && response.data.length) {
                 return response.data
-            } else {
-                return ['Sorry, no record found for'];
             }
+            return ['Sorry, no record was found'];
         }
     } catch (error) {
         return ['Sorry, no record was found'];

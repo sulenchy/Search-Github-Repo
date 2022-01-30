@@ -14,7 +14,7 @@ const  Search = () => {
             const repos = await getRepos(value);
             const headerWrapper = document.getElementById('headerWrapper');
             if (repos.length) {
-                headerWrapper.style.transform = 'translateY(-300px)';
+                headerWrapper.style.transform = window.screen.height <= 900 ? 'translateY(-300px)' : 'translateY(-360px)';
             }
             setTimeout(() => setRepos(repos), 2000);
         } else {
@@ -23,6 +23,7 @@ const  Search = () => {
     }
 
     useEffect(() => {
+        console.log('window width ==> ', window.screen.width, window.screen.height)
         inputRef.current.focus();
         const headerWrapper = document.getElementById('headerWrapper');
         if (!repos.length) {
@@ -39,7 +40,7 @@ const  Search = () => {
                 <h2>Github Repositories</h2>
                 <input className="input" ref={ inputRef } type="search" id="github-users" placeholder="Search github repo by username" onChange={ debounce((event) => handleChange(event), 1000) } />
             </div>
-            <div  style={{ height: '80%', overflowY: 'scroll', overflowX: 'hidden' }}>
+            <div  style={{ height: '80%', overflowY: 'scroll', overflowX: 'hidden', display: 'flex' }}>
             {
                 user ?
                 <div className='result-container flex-start'>
@@ -57,7 +58,7 @@ const  Search = () => {
                 : null
             }
             </div>
-            <div  style={{ height: '5%'}}>Made with love by abi</div>
+            <div  style={{ height: '5%'}}>Made with ❤️ by abi</div>
         </div>
     );
 }
