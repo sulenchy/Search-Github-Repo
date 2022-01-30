@@ -58,7 +58,7 @@ const  Search = () => {
                 : null
             }
             </div>
-            <div  style={{ height: '5%'}}>Made with ❤️ by abi</div>
+            <div  style={{ height: '5%'}}>Made with ❤️ by abi.dev</div>
         </div>
     );
 }
