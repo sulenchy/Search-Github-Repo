@@ -23,7 +23,6 @@ const  Search = () => {
     }
 
     useEffect(() => {
-        console.log('window width ==> ', window.screen.width, window.screen.height)
         inputRef.current.focus();
         const headerWrapper = document.getElementById('headerWrapper');
         if (!repos.length) {
