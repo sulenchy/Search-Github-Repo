@@ -48,8 +48,15 @@ const  Search = () => {
                         sortedRepos.map((repo, index) => {
                             return (
                                 <div className='item-wrapper' key={`wrapper-${index}`}>
-                                    <Link className='link' to={`/readme/${repo.full_name}`} key={index}>{computeName(repo)}</Link>
-                                    <div>{repo.description || 'N/A'}</div>
+                                    {
+                                        typeof repo === 'object' ?
+                                        <>
+                                            <Link className='link' to={`/readme/${repo.full_name}`} key={index}>{computeName(repo)}</Link>
+                                            <div>{repo.description || 'N/A'}</div>
+                                        </>
+                                        : <p style={{ color: 'rgb(211 51 51)' }}>{repo}</p>
+                                    }
+                                    
                                 </div>
                             );
                         })
@@ -58,7 +65,7 @@ const  Search = () => {
                 : null
             }
             </div>
-            <div  style={{ height: '5%'}}>Made with ❤️ by abi.dev</div>
+            <div  style={{ height: '5%'}}>Made with ❤️ by abi.</div>
         </div>
     );
 }
