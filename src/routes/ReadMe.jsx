@@ -16,6 +16,8 @@ const ReadMe = () => {
 
     return(
         <div style={{ padding: '10px' }}>
+            <h1>{repo}</h1>
+            <hr />
             <ReactMarkdown>
                 { repoReadmeMd }
             </ReactMarkdown>
