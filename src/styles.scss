@@ -30,7 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 90px 20px 0
+  padding: 0 20px 0;
+  transition: height 2s;
 }
 
 .input {
@@ -40,7 +41,6 @@ body {
   font-family: $app-font;
   font-size: 15px;
   height: 50px;
-  margin-bottom: 10px;
   outline: none;
   padding-left: 10px;
   padding-right: 10px;
@@ -66,19 +66,21 @@ body {
   text-decoration: none;
 }
 
-@mixin flex-fixed {
+.footer {
+  background-color: #fff;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.header-wrapper {
   align-items: center;
   background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
   width: 100%;
-}
-
-.header-wrapper {
-  @include flex-fixed;
-  transition: transform 2s;
 }
 
 
@@ -88,6 +90,6 @@ body {
   }
 
   .result-container {
-    padding: 125px 20px 0
+    padding: 0 20px 0
   }
 }

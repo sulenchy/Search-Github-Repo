@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ReadMe from './routes/ReadMe';
-import Search from './routes/Search';
-import ErrorBoundary from './ErrorBoundary';
-import "./styles.scss"
+import App from './components/App.jsx';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import ReadMe from './components/ReadMe';
+import Search from './components/Search';
+import ErrorBoundary from './components/ErrorBoundary';
+
+import "./styles.scss";
 
 ReactDOM.render(
     <BrowserRouter>
@@ -17,8 +18,8 @@ ReactDOM.render(
                 <Route
                     path="*"
                     element={
-                        <main style={{ padding: "1rem" }}>
-                        <p>There's nothing here!</p>
+                        <main style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <p>Oops!!! Looks like you miss way. Please, go back <Link to='/'>Home</Link> </p>
                         </main>
                     }
                 />
